@@ -1,3 +1,10 @@
 spring:
   application:
     name: order-service
+  cloud:
+    discovery:
+      client:
+        simple:
+          instances:
+            inventory-service:
+              - uri: http://localhost:8082
